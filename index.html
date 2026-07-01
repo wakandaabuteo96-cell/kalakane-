@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALAKANE INVESTMENT AND DELIVERY</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#000;color:#fff;padding-bottom:70px}
+header{background:#0d6efd;padding:20px;text-align:center}
+header h1{margin:0;font-size:20px}
+section{display:none;padding:20px;max-width:700px;margin:auto}
+section.active{display:block}
+h2{color:#0d6efd;font-size:18px}
+.card{background:#1a1a1a;padding:15px;border-radius:12px;margin-bottom:12px}
+.btn{display:inline-block;margin-top:15px;padding:12px 20px;background:#25D366;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold;width:100%;text-align:center;box-sizing:border-box}
+nav{position:fixed;bottom:0;left:0;right:0;background:#111;display:flex;justify-content:space-around;border-top:1px solid #333}
+nav a{flex:1;text-align:center;padding:10px 0;font-size:11px;color:#aaa;text-decoration:none}
+nav a.active, nav a:hover{color:#25D366}
+nav a span{display:block;font-size:20px}
+footer{text-align:center;padding:15px;font-size:12px;color:#666}
+</style>
+</head>
+<body>
+<header>
+<h1>KALAKANE INVESTMENT AND DELIVERY</h1>
+</header>
+
+<section id="home" class="active">
+<h2>Home</h2>
+<div class="card">Welcome to KALAKANE 🚚<br>Grocery • Phones • Electronics • Delivered to your door in Lilongwe.</div>
+<a class="btn" href="https://wa.me/265XXXXXXXXX" target="_blank">Order Now on WhatsApp</a>
+</section>
+
+<section id="orders">
+<h2>Orders</h2>
+<div class="card">Tap below to order fast on WhatsApp. Tell us what you need.</div>
+<a class="btn" href="https://wa.me/265XXXXXXXXX" target="_blank">Place Order</a>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<div class="card">KALAKANE is a Lilongwe delivery + investment company. We deliver groceries, phones, and electronics same day. Cash or mobile money accepted.</div>
+</section>
+
+<section id="shop">
+<h2>Shop</h2>
+<div class="card"><b>🛒 Groceries</b><br>Food, drinks, household items</div>
+<div class="card"><b>📱 Phones & Accessories</b><br>Phones, earbuds, chargers, cases</div>
+<div class="card"><b>⚡ Electronics</b><br>TVs, speakers, appliances</div>
+</section>
+
+<section id="drivers">
+<h2>Drivers</h2>
+<div class="card">Want to deliver for KALAKANE? Register here with your Full Name, Email, Phone.</div>
+<a class="btn" href="https://forms.gle/PUT-YOUR-DRIVER-FORM-LINK" target="_blank">Apply as Driver</a>
+</section>
+
+<section id="customers">
+<h2>Customers</h2>
+<div class="card">Register once with Full Name, Email, Phone. Then order faster next time.</div>
+<a class="btn" href="https://forms.gle/PUT-YOUR-CUSTOMER-FORM-LINK" target="_blank">Register / Order</a>
+</section>
+
+<nav>
+<a href="#home" class="active" onclick="showTab('home')"><span>🏠</span>Home</a>
+<a href="#orders" onclick="showTab('orders')"><span>+</span>Orders</a>
+<a href="#about" onclick="showTab('about')"><span>ℹ️</span>About</a>
+<a href="#shop" onclick="showTab('shop')"><span>🛍️</span>Shop</a>
+<a href="#drivers" onclick="showTab('drivers')"><span>🚚</span>Drivers</a>
+<a href="#customers" onclick="showTab('customers')"><span>👥</span>Customers</a>
+</nav>
+
+<script>
+function showTab(id){
+document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
