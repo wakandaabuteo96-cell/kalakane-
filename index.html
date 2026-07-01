@@ -1,47 +1,49 @@
-<a class="btn" href="https://wa.me/265XXXXXXXXX" target="_blank">Place Order</a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALAKANE</title>
+<style>
+  body { margin:0; background:#0a0a0a; color:#fff; font-family:Arial; padding-bottom:70px; }
+  header { background:#0057ff; padding:15px; text-align:center; font-size:20px; font-weight:bold; }
+  nav { position:fixed; bottom:0; left:0; right:0; display:flex; background:#111; border-top:1px solid #222; }
+  nav button { flex:1; padding:12px 5px; background:#111; color:#ccc; border:none; font-size:12px; }
+  nav button.active { color:#25D366; }
+  .page { display:none; padding:20px; text-align:center; }
+  .page.active { display:block; }
+  .btn { display:block; margin:12px auto; padding:15px; background:#25D366; color:#fff; 
+         text-decoration:none; border-radius:12px; font-weight:bold; max-width:320px; }
+  .btn.dark { background:#000; border:2px solid #25D366; }
+</style>
+</head>
+<body>
 
-<section id="about">
-<h2>About Us</h2>
-<div class="card">KALAKANE is a Lilongwe delivery + investment company. We deliver groceries, phones, and electronics same day. Cash or mobile money accepted.</div>
-</section>
+<header>KALAKANE INVESTMENT & DELIVERY</header>
 
-<section id="shop">
-<h2>Shop</h2>
-<div class="card"><b>🛒 Groceries</b><br>Food, drinks, household items</div>
-<div class="card"><b>📱 Phones & Accessories</b><br>Phones, earbuds, chargers, cases</div>
-<div class="card"><b>⚡ Electronics</b><br>TVs, speakers, appliances</div>
-</section>
+<div class="page active"><h2>Home</h2><p>Fabrics • Cushions • Makawa</p>
+<a class="btn" href="https://wa.me/c/NUMBER1">View Catalog</a></div>
 
-<section id="drivers">
-<h2>Drivers</h2>
-<div class="card">Want to deliver for KALAKANE? Register here with your Full Name, Email, Phone.</div>
-<a class="btn" href="https://forms.gle/PUT-YOUR-DRIVER-FORM-LINK" target="_blank">Apply as Driver</a>
-</section>
+<div class="page"><h2>Shop</h2><a class="btn" href="https://wa.me/c/NUMBER1">Open Catalog</a></div>
 
-<section id="customers">
-<h2>Customers</h2>
-<div class="card">Register once with Full Name, Email, Phone. Then order faster next time.</div>
-<a class="btn" href="https://forms.gle/PUT-YOUR-CUSTOMER-FORM-LINK" target="_blank">Register / Order</a>
-</section>
+<div class="page"><h2>Pay</h2><p>Airtel Money / Mpamba</p>
+<a class="btn" href="https://wa.me/NUMBER1?text=Proof%20of%20payment">Send Proof</a></div>
+
+<div class="page"><h2>Support</h2>
+<a class="btn" href="https://wa.me/NUMBER1?text=Hello%20KALAKANE">Sales 1</a>
+<a class="btn dark" href="https://wa.me/NUMBER2?text=Hello%20KALAKANE">Sales 2</a>
+<a class="btn dark" href="https://wa.me/NUMBER3?text=Hello%20KALAKANE">Sales 3</a></div>
+
+<div class="page"><h2>Drivers</h2>
+<a class="btn dark" href="https://wa.me/NUMBER1?text=Track%20driver">Track Driver</a></div>
 
 <nav>
-<a href="#home" class="active" onclick="showTab('home')"><span>🏠</span>Home</a>
-<a href="#orders" onclick="showTab('orders')"><span>+</span>Orders</a>
-<a href="#about" onclick="showTab('about')"><span>ℹ️</span>About</a>
-<a href="#shop" onclick="showTab('shop')"><span>🛍️</span>Shop</a>
-<a href="#drivers" onclick="showTab('drivers')"><span>🚚</span>Drivers</a>
-<a href="#customers" onclick="showTab('customers')"><span>👥</span>Customers</a>
+<button class="active" onclick="s(0)">Home</button>
+<button onclick="s(1)">Shop</button>
+<button onclick="s(2)">Pay</button>
+<button onclick="s(3)">Support</button>
+<button onclick="s(4)">Drivers</button>
 </nav>
-
-<script>
-function showTab(id){
-document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
-document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
-window.scrollTo(0,0);
-}
-</script>
+<script>function s(i){document.querySelectorAll('.page').forEach((p,k)=>p.classList.toggle('active',k===i));document.querySelectorAll('nav button').forEach((b,k)=>b.classList.toggle('active',k===i));}</script>
 </body>
 </html>
