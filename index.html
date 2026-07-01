@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KALAKANE INVESTMENT & DELIVERY</title>
-<style>body{margin:0;background:#0a0a0a;color:#fff;font-family:Arial;padding-bottom:70px;text-align:center}
-header{background:#0057ff;padding:15px;font-size:18px;font-weight:bold}
-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#111;border-top:1px solid #222}
-nav button{flex:1;padding:12px 5px;background:#111;color:#ccc;border:none;font-size:12px}
-nav button.active{color:#25D366}.page{display:none;padding:20px}.page.active{display:block}
-.btn{display:block;margin:12px auto;padding:15px;background:#25D366;color:#fff;text-decoration:none;border-radius:12px;font-weight:bold;max-width:320px}
-.btn.dark{background:#000;border:2px solid #25D366}</style>
-</head><body>
+<style>
+  body { margin:0; background:#0a0a0a; color:#fff; font-family:Arial; padding-bottom:80px; text-align:center; }
+  header { background:#0057ff; padding:15px; font-size:18px; font-weight:bold; }
+  nav { position:fixed; bottom:0; left:0; right:0; height:70px; display:flex; background:#111; border-top:1px solid #222; z-index:999; }
+  nav button { flex:1; padding:0; background:#111; color:#aaa; border:none; font-size:12px; }
+  nav button.active { color:#25D366; font-weight:bold; }
+  .page { display:none; padding:20px; }
+  .page.active { display:block; }
+  .btn { display:block; margin:12px auto; padding:15px; background:#25D366; color:#fff; 
+         text-decoration:none; border-radius:12px; font-weight:bold; max-width:320px; }
+  .btn.dark { background:#000; border:2px solid #25D366; }
+</style>
+</head>
+<body>
+
 <header>KALAKANE INVESTMENT & DELIVERY</header>
-<div class="page active"><h2>Home</h2><p>Fabrics • Cushions • Makawa</p>
+
+<div class="page active"><h2>Home</h2><p>Fabrics • Duvets • Curtains • Bedsheets</p>
 <a class="btn" href="https://wa.me/c/265999318325">View Catalog</a></div>
+
 <div class="page"><h2>Shop</h2><a class="btn" href="https://wa.me/c/265999318325">Open Catalog</a></div>
-<div class="page"><h2>Pay</h2><p>Airtel Money / Mpamba</p>
-<a class="btn" href="https://wa.me/265999318325?text=Proof">Send Proof</a></div>
-<div class="page"><h2>Support</h2><a class="btn" href="https://wa.me/265999318325">Sales 1</a>
-<a class="btn dark" href="https://wa.me/265992971802">Sales 2</a></div>
-<div class="page"><h2>Drivers</h2><a class="btn dark" href="https://wa.me/265999318325">Join Drivers</a></div>
-<nav><button class="active" onclick="s(0)">Home</button><button onclick="s(1)">Shop</button>
-<button onclick="s(2)">Pay</button><button onclick="s(3)">Support</button><button onclick="s(4)">Drivers</button></nav>
-<script>function s(i){document.querySelectorAll('.page').forEach((p,k)=>p.classList.toggle('active',k===i));
-document.querySelectorAll('nav button').forEach((b,k)=>b.classList.toggle('active',k===i));}</script>
-</body></html>
+
+<div class="page"><h2>Pay</h2><p>Pay via Airtel Money / Mpamba</p>
+<a class="btn" href="https://wa.me/265999318325?text=Proof%20of%20payment">Send Proof</a></div>
+
+<div class="page"><h2>Support</h2>
+<p>Chat with us now</p>
+<a class="btn" href="https://wa.me/265999318325?text=Hello%20KALAKANE">Sales 1</a>
+<a class="btn dark" href="https://wa.me/265991971802?text=Hello%20KALAKANE">Sales 2</a></div>
+
+<div class="page"><h2>Drivers</h2>
+<p>Join or track a driver</p>
+<a class="btn dark" href="https://wa.me/265999318325?text=Join%20Drivers">Join Drivers</a>
+<a class="btn" href="https://wa.me/265999318325?text=Track%20my%20driver">Track Driver</a></div>
+
+<nav>
+<button class="active" onclick="s(0)">Home</button>
+<button onclick="s(1)">Shop</button>
+<button onclick="s(2)">Pay</button>
+<button onclick="s(3)">Support</button>
+<button onclick="s(4)">Drivers</button>
+</nav>
+<script>function s(i){document.querySelectorAll('.page').forEach((p,k)=>p.classList.toggle('active',k===i));document.querySelectorAll('nav button').forEach((b,k)=>b.classList.toggle('active',k===i));}</script>
+</body>
+</html>
